@@ -4,7 +4,7 @@ import Link from 'next/link';
 const NavBar: React.FC = () => {
 
   return (
-    <nav style={{ backgroundColor: 'purple', padding: '1rem' }}>
+    <nav className="bg-purple-600 p-4">
       <ol style={{ listStyleType: 'none', margin: 10, padding: 0 }}>
         <img src='/singlestore_white.svg' width={"10%"} style={{ display: 'inline', marginLeft: '1rem' }} />
         <li style={{ display: 'inline', marginLeft: '5rem' }}>
