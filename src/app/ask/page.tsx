@@ -29,7 +29,7 @@ export default function Home() {
           {messages.length == 0 &&
             (
               <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-                <img style={{ width: "25%", marginBottom: "2%" }} src='/MongoDB_White.svg' />
+                <img style={{ width: "25%", marginBottom: "2%" }} src='/singlestore_white.svg' />
                 <span style={{ marginBottom: '2%', fontSize: '40px', justifySelf: 'center' }}>+</span>
                 <img style={{ width: "8%", marginBottom: "2%" }} src='/openAI.svg' />
               </div>

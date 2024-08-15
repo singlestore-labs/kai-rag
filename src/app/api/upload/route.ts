@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
             getEmbeddingsTransformer(),
             searchArgs()
           )});
-        return NextResponse.json({ message: "Uploaded to MongoDB" }, { status: 200 });
+        return NextResponse.json({ message: "Uploaded to SingleStore Kai" }, { status: 200 });
 
       } else {
         console.log('Uploaded file is not in the expected format.');

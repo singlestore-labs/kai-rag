@@ -8,7 +8,7 @@ const Home = () => {
       <NavBar />
       <div className='overview-text'>
 
-        <h1 style={{ fontWeight: 'bold', fontSize: '2em' }}>RAG QnA Chatbot</h1>
+        <h1 style={{ fontWeight: 'bold', fontSize: '2em' }}>RAG QnA Chatbot - SingleStore</h1>
         <br />
         
         <p>With this RAG (Retrieval-Augmented Generation) application, you can quickly deploy a chatbot that is enhanced by your own data. By simply uploading any PDF file(s) of your choosing, you will be creating your own custom Questions and Answers (QnA) chatbot.</p>
