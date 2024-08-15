@@ -42,8 +42,8 @@ importers:
         specifier: ^3.0.5
         version: 3.1.4
       pdfjs-dist:
-        specifier: ^4.0.379
-        version: 4.5.136
+        specifier: ^4.2.67
+        version: 4.2.67
       pdfreader:
         specifier: ^3.0.2
         version: 3.0.4
@@ -2446,8 +2446,8 @@ packages:
     bundledDependencies:
       - '@xmldom/xmldom'
 
-  pdfjs-dist@4.5.136:
-    resolution: {integrity: sha512-V1BALcAN/FmxBEShLxoP73PlQZAZtzlaNfRbRhJrKvXzjLC5VaIlBAQUJuWP8iaYUmIdmdLHmt3E2TBglxOm3w==}
+  pdfjs-dist@4.2.67:
+    resolution: {integrity: sha512-rJmuBDFpD7cqC8WIkQUEClyB4UAH05K4AsyewToMTp2gSy3Rrx8c1ydAVqlJlGv3yZSOrhEERQU/4ScQQFlLHA==}
     engines: {node: '>=18'}
 
   pdfreader@3.0.4:
@@ -5083,7 +5083,7 @@ snapshots:
 
   pdf2json@3.1.4: {}
 
-  pdfjs-dist@4.5.136:
+  pdfjs-dist@4.2.67:
     optionalDependencies:
       canvas: 2.11.2
       path2d: 0.2.1
