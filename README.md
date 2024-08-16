@@ -10,7 +10,6 @@ This project implements a Retrieval-Augmented Generation (RAG) chatbot using Lan
   - [Running the App Locally](#running-the-app-locally)
   - [Setting Up SingleStore Kai](#setting-up-singlestore-kai)
   - [Data Fetching in askinsights Page](#data-fetching-in-askinsights-page)
-  - [Original Setup and Deployment](#original-setup-and-deployment)
 
 ## Installation
 
@@ -54,8 +53,33 @@ To run the app locally:
 To set up SingleStore Kai:
 
 1. Sign up for a SingleStore account at [https://www.singlestore.com/](https://www.singlestore.com/)
-2. Create a new workspace and database
-3. Obtain your connection credentials (host, port, username, password, database name)
+2. Create a new workspace only if you are using a credit based trial. If you signed up for a free tier the workspace and database will be created for you by default.
+3. Next, create a database called "chatter" (or go to the db that was created for you) and create a vector index. To do this, open Kai shell of the workspace Kai lives, and run this command.
+```db.createCollection(
+    "training_data",
+	{
+		columns: [
+			{ id: 'text', type: 'VARCHAR(5000) NOT NULL' },
+			{ id: 'text_embedding', type: 'VECTOR(1536) NOT NULL' }
+		],
+		indexes: [
+			{
+				key: {
+					text_embedding: 'vector'
+				},
+				name: 'vector_index',
+				kaiIndexOptions: {
+					index_type: 'IVF_FLAT',
+					nlist: 5,
+					nprobe: 1,
+					metric_type: 'EUCLIDEAN_DISTANCE',
+					dimensions: 1536,
+				}
+			}
+		]
+	}
+)```
+3. Obtain your connection credentials for Kai (host, port, username, password, database name)
 4. Add these credentials to your `.env` file as shown in the [Running the App Locally](#running-the-app-locally) section
 
 ## Data Fetching in askinsights Page
@@ -84,6 +108,4 @@ The process works as follows:
 
 This approach allows the chatbot to leverage both unstructured text data (through vector search) and structured data (from SingleStore) to provide more accurate and insightful responses.
 
-## Original Setup and Deployment
 
-[The rest of the original README content follows here...]
