@@ -55,7 +55,8 @@ To set up SingleStore Kai:
 1. Sign up for a SingleStore account at [https://www.singlestore.com/](https://www.singlestore.com/)
 2. Create a new workspace only if you are using a credit based trial. If you signed up for a free tier the workspace and database will be created for you by default.
 3. Next, create a database called "chatter" (or go to the db that was created for you) and create a vector index. To do this, open Kai shell of the workspace Kai lives, and run this command.
-```db.createCollection(
+``` 
+db.createCollection(
     "training_data",
 	{
 		columns: [
@@ -78,9 +79,10 @@ To set up SingleStore Kai:
 			}
 		]
 	}
-)```
-3. Obtain your connection credentials for Kai (host, port, username, password, database name)
-4. Add these credentials to your `.env` file as shown in the [Running the App Locally](#running-the-app-locally) section
+)
+```
+1. Obtain your connection credentials for Kai (host, port, username, password, database name)
+2. Add these credentials to your `.env` file as shown in the [Running the App Locally](#running-the-app-locally) section
 
 ## Data Fetching in askinsights Page
 
