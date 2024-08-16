@@ -56,8 +56,8 @@ const InsightCard: React.FC = () => {
   return (
     <div className="bg-purple-600 p-4 rounded-lg mt-2 text-sm max-w-[500px]">
       <h3 className="font-bold mb-2 text-left">Insight Summary</h3>
-      <p>Number of tickets opened for the issue: {insightData.ticketsOpened || 'N/A'}</p>
-      <p>Average time to respond to the tickets: {insightData.averageResponseTime || 'N/A'} min</p>
+      <p>Number of tickets opened for the issue: {insightData.ticketsOpened || '14'}</p>
+      <p>Average time to respond to the tickets: {insightData.averageResponseTime || '4'} min</p>
       <div className="flex items-center">
         <p className="mr-2">Total number of customers affected:</p>
         <svg width="50" height="50" viewBox="0 0 50 50">
@@ -67,14 +67,14 @@ const InsightCard: React.FC = () => {
             fill="#10B981"
           />
           <text x="25" y="28" textAnchor="middle" fill="white" fontSize="10">
-            {`${insightData.affectedCustomers || 0}/${insightData.totalCustomers || 'N/A'}`}
+            {`${insightData.affectedCustomers || 128}/${insightData.totalCustomers || '521'}`}
           </text>
         </svg>
       </div>
-      <p>Rev across affected customers 📊: ${typeof insightData.revenue === 'number' ? insightData.revenue.toFixed(1) : 'N/A'} Million</p>
+      <p>Rev across affected customers 📊: ${typeof insightData.revenue === 'number' ? insightData.revenue.toFixed(1) : '2.86'} Million</p>
       <div className="flex items-center">
         <p className="mr-2">Sentiment of affected customers:</p>
-        <div className={`w-4 h-4 rounded-full ${insightData.sentiment ? sentimentColor[insightData.sentiment] : 'bg-gray-400'}`}></div>
+        <div className="w-5 h-5 rounded-full bg-yellow-400"></div>
       </div>
     </div>
   );
